@@ -17,7 +17,7 @@ from datetime import timedelta, date
 # set your parameters
 ###############################################################
 
-browser_path = 'C:/vnineteen/chromedriver.exe'
+browser_path = 'C:/Users/misba/Downloads/Software/chromedriver.exe'
 
 # replace the urls here with your twitter advanced searches 
 # AND make sure to erase anything after the end of the query
@@ -32,13 +32,13 @@ scroll_down_num = 4
 # output file name
 out_name = 'repurpose.csv'
 
-start_date = '2020-6-1'
-end_date = '2020-10-13'
+start_date = '2020-06-01'
+end_date = '2020-06-10'
 
 # how many days between each search
 # aka 2020-6-1    and then if days_between = 2
 # the next search will be for 2020-6-3 till it reaches end_date
-days_between = 2
+days_between = 1
 
 # no need to change the following variable unless Twitter html changes
 # its the xpath of each tweet
@@ -101,30 +101,3 @@ if __name__ == '__main__':
     # output the dataset
     df.to_csv(out_name.split('.csv')[0] + '_parsed.csv')
 
-
-'''
-for reference, this is what the raw string looks like from scrape:
-
-gus
-@EmmArrGus
-·
-Oct 9
-THE SIMPSONS PREDICTED ME???
-2.9K views
-0:05 / 0:16
-7
-30
-255
-
-
-
-Spookja
-@ItsMeNikja
-·
-Oct 10
-Replying to
-@simpsons_vids
-The Simpsons predicted YouTube Poop as well.
-4
-70
-'''
